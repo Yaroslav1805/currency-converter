@@ -180,12 +180,34 @@ h1 {
   border-top: 1px solid var(--border);
 }
 
+/* АДАПТИВНОСТЬ ИСТОРИИ ДЛЯ МОБИЛЬНЫХ УСТРОЙСТВ */
 @media (max-width: 480px) {
-  .history-section h2 {
-    font-size: 1.1em;
+  .history-section {
+    padding: 0 10px;
   }
+  
+  .history-section h2 {
+    font-size: 1.2em;
+    margin-bottom: 10px;
+  }
+  
+  #history-list {
+    font-size: 0.9em;
+  }
+  
   #history-list li {
-    font-size: 0.85em;
     padding: 6px 0;
+    font-size: 0.85em;
+  }
+  
+  #clear-history {
+    padding: 6px 12px;
+    font-size: 0.9em;
+    margin-top: 10px;
+  }
+  
+  .app-footer {
+    font-size: 0.8em;
+    padding: 15px 0;
   }
 }
