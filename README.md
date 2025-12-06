@@ -15,7 +15,7 @@
 - LocalStorage
 
 ## Демо
-[Ссылка на GitHub Pages](#)
+[Ссылка на GitHub Pages]([#](https://yaroslav1805.github.io/currency-converter/))
 
 ## Автор
 [Ваше имя]
