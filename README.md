@@ -14,14 +14,8 @@
 - ExchangeRate API
 - LocalStorage
 
-## Запуск
-Откройте файл `index.html` в браузере.
-
 ## Демо
 [Ссылка на GitHub Pages](#)
 
 ## Автор
 [Ваше имя]
-
-## Лицензия
-MIT
