@@ -180,34 +180,90 @@ h1 {
   border-top: 1px solid var(--border);
 }
 
-/* АДАПТИВНОСТЬ ИСТОРИИ ДЛЯ МОБИЛЬНЫХ УСТРОЙСТВ */
+/* =============== МОБИЛЬНЫЕ УСТРОЙСТВА =============== */
 @media (max-width: 480px) {
+  /* Заголовок */
+  h1 {
+    font-size: 1.4em;
+    text-align: center;
+    margin-bottom: 15px;
+  }
+  
+  /* Шапка */
+  header {
+    flex-direction: column;
+    gap: 10px;
+    text-align: center;
+  }
+  
+  /* Основной блок конвертера */
+  .converter {
+    flex-direction: column;
+    gap: 15px;
+    padding: 10px;
+  }
+  
+  /* Блоки с валютами */
+  .box {
+    max-width: 100%;
+    padding: 15px;
+    margin: 0;
+  }
+  
+  /* Кнопки выбора валюты */
+  .currency-selector {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 5px;
+  }
+  
+  .currency-btn {
+    padding: 8px 5px;
+    font-size: 0.9em;
+    justify-content: center;
+  }
+  
+  /* Поля ввода */
+  .amount-input {
+    font-size: 20px;
+    padding: 10px;
+    margin: 10px 0;
+  }
+  
+  /* Кнопка обмена */
+  .swap-btn {
+    margin: 5px 0;
+    font-size: 24px;
+    transform: rotate(90deg);
+  }
+  
+  /* Информация о курсе */
+  .rate-info {
+    font-size: 0.8em;
+    margin: 5px 0;
+  }
+  
+  /* История */
   .history-section {
-    padding: 0 10px;
+    padding: 15px 10px;
   }
   
   .history-section h2 {
-    font-size: 1.2em;
-    margin-bottom: 10px;
+    font-size: 1.1em;
+    text-align: center;
   }
   
-  #history-list {
-    font-size: 0.9em;
-  }
-  
-  #history-list li {
-    padding: 6px 0;
-    font-size: 0.85em;
-  }
-  
-  #clear-history {
-    padding: 6px 12px;
-    font-size: 0.9em;
-    margin-top: 10px;
-  }
-  
+  /* Футер */
   .app-footer {
-    font-size: 0.8em;
-    padding: 15px 0;
+    font-size: 0.75em;
+    padding: 15px 10px;
+    margin-top: 20px;
+  }
+  
+  /* Информация об обновлении курсов */
+  #last-update {
+    font-size: 0.7em;
+    text-align: center;
+    margin-top: 8px;
   }
 }
