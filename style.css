@@ -1,0 +1,191 @@
+:root {
+  --bg: #ffffff;
+  --text: #000000;
+  --card-bg: #f8f9fa;
+  --border: #dee2e6;
+  --accent: #00c853;
+  --error: #e53935;
+}
+.dark-theme {
+  --bg: #121212;
+  --text: #ffffff;
+  --card-bg: #1e1e1e;
+  --border: #333;
+  --accent: #66bb6a;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+body {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  background: var(--bg);
+  color: var(--text);
+  line-height: 1.6;
+  padding: 20px;
+  transition: background 0.3s, color 0.3s;
+}
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 24px;
+}
+h1 {
+  font-size: 1.8em;
+}
+#theme-toggle {
+  background: none;
+  border: 1px solid var(--border);
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  font-size: 16px;
+  cursor: pointer;  
+  color: var(--text);
+}
+.converter {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 30px;
+}
+.box {
+  background: var(--card-bg);
+  border: 1px solid var(--border);
+  border-radius: 12px;  
+  padding: 20px;
+  width: 100%;
+  max-width: 320px;
+  text-align: center;
+}
+.box-title {
+  font-size: 0.9em;
+  margin-bottom: 12px;
+  color: var(--text);
+  opacity: 0.8;
+}
+.currency-selector {
+  display: flex;
+  gap: 6px;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-bottom: 16px;
+}
+.currency-btn {
+  padding: 6px 12px;
+  background: #e0e0e0;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: 500;
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+.currency-btn.active {
+  background: var(--accent);
+  color: white;
+}
+.amount-input {
+  width: 100%;
+  padding: 12px;
+  font-size: 22px;
+  text-align: center;
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  background: var(--bg);
+  color: var(--text);
+  margin: 12px 0;
+}
+.rate-info {
+  font-size: 0.85em;
+  color: var(--text);
+  opacity: 0.7;
+  margin: 8px 0;
+}
+.swap-btn {
+  font-size: 28px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: var(--text);
+  margin: 0 10px;
+}
+#last-update {
+  font-size: 0.8em;
+  color: var(--text);
+  opacity: 0.6;
+  text-align: right;
+  margin-top: 10px;
+}
+.history-section {
+  max-width: 700px;
+  margin: 0 auto;
+  padding-top: 20px;
+  border-top: 1px solid var(--border);
+}
+.history-section h2 {
+  margin-bottom: 12px;
+  font-size: 1.3em;
+}
+#history-list {
+  list-style: none;
+  margin-bottom: 16px;
+}
+#history-list li {
+  padding: 8px 0;
+  border-bottom: 1px solid var(--border);
+  font-size: 0.95em;
+}
+#clear-history {
+  background: var(--error);
+  color: white;
+  border: none;
+  padding: 8px 16px;
+  border-radius: 6px;
+  cursor: pointer;
+}
+.fade-in {
+  animation: fadeIn 0.4s ease-in-out;
+}
+@keyframes fadeIn {
+  from { opacity: 0.7; transform: translateY(2px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+@media (max-width: 768px) {
+  .converter {
+    flex-direction: column;
+    align-items: stretch;
+  }
+  .swap-btn {
+    align-self: center;
+    margin: 10px 0;
+  }
+  .amount-input {
+    font-size: 20px;
+  }
+}
+.app-footer {
+  margin-top: 40px;
+  padding-top: 20px;
+  text-align: center;
+  font-size: 0.85em;
+  color: var(--text);
+  opacity: 0.7;
+  border-top: 1px solid var(--border);
+}
+
+@media (max-width: 480px) {
+  .history-section h2 {
+    font-size: 1.1em;
+  }
+  #history-list li {
+    font-size: 0.85em;
+    padding: 6px 0;
+  }
+}

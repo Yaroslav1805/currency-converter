@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Конвертер валют</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body class="light-theme">
+  <header>
+    <h1>КОНВЕРТЕР ВАЛЮТ</h1>
+    <button id="theme-toggle" aria-label="Сменить тему">🌓</button>
+  </header>
+  
+  <div class="converter">
+    <div class="box">
+      <div class="box-title">У меня есть</div>
+      <div class="currency-selector" id="selector1"></div>
+      <input type="text" class="amount-input" id="amount1" inputmode="decimal" placeholder="0.00" />
+      <div class="rate-info" id="rate1">1 — —</div>
+      <div id="last-update">Курсы обновлены: —</div>
+    </div>
+
+    <button class="swap-btn" id="swap-btn" aria-label="Поменять валюты местами">↔️</button>
+
+    <div class="box">
+      <div class="box-title">Хочу приобрести</div>
+      <div class="currency-selector" id="selector2"></div>
+      <input type="text" class="amount-input" id="amount2" inputmode="decimal" placeholder="0.00" />
+      <div class="rate-info" id="rate2">1 — —</div>
+    </div>
+  </div>
+
+  <div class="history-section">
+    <h2>История конвертаций (последние 10)</h2>
+    <ul id="history-list"></ul>
+    <button id="clear-history">Очистить историю</button>
+  </div>
+
+  <footer class="app-footer">
+    Конвертер валют онлайн — актуальные курсы и быстрая конвертация без регистрации.
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
